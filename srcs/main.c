@@ -11,9 +11,8 @@ int main(int ac, char **av)
 	root = check_input(ac, av);
 	while (root)
 	{
-		printf("-%d\n", (int)root->data);
+		printf("-%d-\n", root->data);
 		root = root->next;
 	}
-
 	return (0);
 }

@@ -6,7 +6,7 @@ W = -Wall -Werror -Wextra
 
 LIB = libft/libft.a
 
-FLAG = -fsanitize=address
+# FLAG = -fsanitize=address
 
 SRCS = srcs/main.c srcs/check.c
 
@@ -22,6 +22,7 @@ $(NAME): $(OBJS)
 
 %.o : %.c ${HEADER}
 	@${CC} ${W} -c $< -o $@
+
 clean : 
 	@make clean -C libft
 	@${RM} ${OBJS}
@@ -30,5 +31,6 @@ fclean : clean
 	@make fclean -C libft
 	@${RM} ${NAME}
 
-
 re : fclean all
+
+.SILENT: all clean fclean ${OBJS} ${NAME}

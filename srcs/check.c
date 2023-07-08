@@ -10,6 +10,27 @@ void	str_free(char **str)
 	free(str);
 }
 
+void check_sorted(t_list *root)
+{
+
+	t_list	*froot0;
+	t_list	*froot1;
+
+	froot0 = root;
+	while (froot0)
+	{
+		froot1 = froot0->next;
+		while (froot1)
+		{
+			if (froot0->data > froot1->data)
+				return ;
+			froot1 = froot1->next;
+		}
+		froot0 = froot0->next;
+	}
+	ft_panic("\033[31mError: already sorted\033[0m\n");
+}
+
 void	check_duplicate(t_list *root)
 {
 	t_list	*froot0;
@@ -50,10 +71,11 @@ t_list	*check_input(int ac, char **av)
 				while (splitted && splitted[j])
 				{
 					ft_lstadd_back(&root, ft_lstnew(ft_atoi(splitted[j++])));
-					check_duplicate(root);
 				}
 			str_free(splitted);
 			i++;
 		}
+				check_duplicate(root);
+				check_sorted(root);
 	return (root);
 }
