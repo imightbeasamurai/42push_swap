@@ -6,7 +6,7 @@ W = -Wall -Werror -Wextra
 
 LIB = libft/libft.a
 
-# FLAG = -fsanitize=address
+FLAG = -fsanitize=address
 
 SRCS = srcs/main.c srcs/check/check.c srcs/instructions/push_to.c srcs/instructions/reverse_rotate.c \
 srcs/instructions/rotate.c srcs/instructions/swap.c srcs/sort/ft_sort.c

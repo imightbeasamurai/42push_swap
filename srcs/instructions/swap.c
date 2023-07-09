@@ -6,7 +6,7 @@
 /*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 16:17:30 by aerrahim          #+#    #+#             */
-/*   Updated: 2023/07/09 16:21:29 by aerrahim         ###   ########.fr       */
+/*   Updated: 2023/07/09 16:54:27 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	sa(t_list **rootA)
 		*rootA = (*rootA)->next;
 		tmp->next = (*rootA)->next;
 		(*rootA)->next = tmp;
+		write(1, "sa\n", 3);
 	}
 }
 
@@ -35,6 +36,7 @@ void	sb(t_list **rootB)
 		*rootB = (*rootB)->next;
 		tmp->next = (*rootB)->next;
 		(*rootB)->next = tmp;
+		write(1, "sb\n", 3);
 	}
 }
 
