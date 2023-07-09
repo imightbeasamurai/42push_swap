@@ -8,7 +8,7 @@ LIB = libft/libft.a
 
 # FLAG = -fsanitize=address
 
-SRCS = srcs/main.c srcs/check.c
+SRCS = srcs/main.c srcs/check.c srcs/push_to.c srcs/reverse_rotate.c srcs/rotate.c srcs/swap.c
 
 OBJS = $(SRCS:.c=.o)
 
