@@ -10,7 +10,7 @@
 
 // typedef struct s_list
 // {
-// 	void			*data;
+// 	int			data;
 // 	struct s_list	*next;
 // }	t_list;
 
@@ -31,4 +31,5 @@ void	rr(t_list **rootA, t_list **rootB);
 void	rra(t_list **rootA);
 void	rrb(t_list **rootB);
 void	rrr(t_list **rootA, t_list **rootB);
+
 #endif
