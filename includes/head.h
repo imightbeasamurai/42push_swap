@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   head.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 16:19:34 by aerrahim          #+#    #+#             */
+/*   Updated: 2023/07/09 16:42:56 by aerrahim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HEAD_H
 # define HEAD_H
 
@@ -15,21 +27,21 @@
 // }	t_list;
 
 /* checking input */
-t_list		*check_input(int ac, char **av);
+t_list		*check_input(int ac, char **av, int i);
 void		str_free(char **str);
 void		check_duplicate(t_list *root);
 
-/* instructions */ 
-void	pb(t_list **rootA, t_list **rootB);
-void	pa(t_list **rootA, t_list **rootB);
-void	sa(t_list **rootA);
-void	sb(t_list **rootB);
-void	ss(t_list **rootA, t_list **rootB);
-void	ra(t_list **rootA);
-void	rb(t_list **rootB);
-void	rr(t_list **rootA, t_list **rootB);
-void	rra(t_list **rootA);
-void	rrb(t_list **rootB);
-void	rrr(t_list **rootA, t_list **rootB);
+/* instructions */
+void		pb(t_list **rootA, t_list **rootB);
+void		pa(t_list **rootA, t_list **rootB);
+void		sa(t_list **rootA);
+void		sb(t_list **rootB);
+void		ss(t_list **rootA, t_list **rootB);
+void		ra(t_list **rootA);
+void		rb(t_list **rootB);
+void		rr(t_list **rootA, t_list **rootB);
+void		rra(t_list **rootA);
+void		rrb(t_list **rootB);
+void		rrr(t_list **rootA, t_list **rootB);
 
 #endif
