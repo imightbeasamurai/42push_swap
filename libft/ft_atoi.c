@@ -6,7 +6,7 @@
 /*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 16:17:52 by aerrahim          #+#    #+#             */
-/*   Updated: 2023/07/09 16:41:14 by aerrahim         ###   ########.fr       */
+/*   Updated: 2023/07/10 23:02:13 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		i++;
 	}
+	if (!str[i])
+		ft_panic("Error\n");
 	while (is_digit(str[i]))
 	{
 		sum = sum * 10 + str[i] - 48;

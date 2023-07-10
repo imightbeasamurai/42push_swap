@@ -6,7 +6,7 @@
 /*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 16:19:34 by aerrahim          #+#    #+#             */
-/*   Updated: 2023/07/09 16:42:56 by aerrahim         ###   ########.fr       */
+/*   Updated: 2023/07/10 18:19:20 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 # include <limits.h>
 # include "libft.h"
 
-// typedef struct s_list
-// {
-// 	int			data;
-// 	struct s_list	*next;
-// }	t_list;
+typedef struct var_s
+{
+    
+}   e_var;
+
 
 /* checking input */
 t_list		*check_input(int ac, char **av, int i);
@@ -43,5 +43,17 @@ void		rr(t_list **rootA, t_list **rootB);
 void		rra(t_list **rootA);
 void		rrb(t_list **rootB);
 void		rrr(t_list **rootA, t_list **rootB);
+
+/* sort */
+int			maxExt(t_list *a);
+int			minExt(t_list *a);
+void		sort_t(t_list **stack);
+void		low_sort(t_list **stack_a, t_list **stack_b);
+void	    big_sort(t_list **stack_a, t_list **stack_b);
+bool	    firsthalf(int a, int b);
+
+void		prit_stack(t_list *stack);
+
+
 
 #endif

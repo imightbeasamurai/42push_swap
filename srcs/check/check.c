@@ -6,7 +6,7 @@
 /*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 16:16:56 by aerrahim          #+#    #+#             */
-/*   Updated: 2023/07/09 16:28:51 by aerrahim         ###   ########.fr       */
+/*   Updated: 2023/07/10 15:32:22 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	str_free(char	**str)
 	int	i;
 
 	i = 0;
-	while (!str[i])
+	while (str[i])
 		free(str[i++]);
 	free(str);
 }

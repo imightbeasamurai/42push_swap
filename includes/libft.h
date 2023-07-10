@@ -6,7 +6,7 @@
 /*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 16:19:39 by aerrahim          #+#    #+#             */
-/*   Updated: 2023/07/09 16:19:40 by aerrahim         ###   ########.fr       */
+/*   Updated: 2023/07/10 14:54:03 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_list
 {
 	int				data;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 

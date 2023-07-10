@@ -5,34 +5,64 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aerrahim <aerrahim@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 16:17:02 by aerrahim          #+#    #+#             */
-/*   Updated: 2023/07/09 16:44:49 by aerrahim         ###   ########.fr       */
+/*   Created: 2023/07/10 06:45:38 by aerrahim          #+#    #+#             */
+/*   Updated: 2023/07/10 22:15:50 by aerrahim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/head.h"
 
-// void    t_sort(t_list *rootA, t_list *rootB)
-// {
+void	sort_t(t_list **stack)
+{
+	int			max_pos;
+	int			min_pos;
 
-// }
+	max_pos = maxExt(*stack);
+	min_pos = minExt(*stack);
 
-// void    f_sort(t_list *rootA, t_list *rootB)
-// {
 
-// }
+	if (!max_pos && min_pos == 1)
+		ra(stack);
+	else if (!max_pos && min_pos == 2)
+	{
+		ra(stack);
+		sa(stack);
+	}
+	else if (max_pos == 1 && !min_pos)
+	{
+		sa(stack);
+		ra(stack);
+	}
+	else if (max_pos == 1 && min_pos == 2)
+		rra(stack);
+	else if (max_pos == 2 && min_pos == 1)
+		sa(stack);
+}
 
-// void    ft_sort(t_list *rootA, t_list *rootB)
-// {
-//     int *rpt;
-//     int i;
+bool	firsthalf(int a, int b)
+{
+	if (a <= b / 2)
+		return (true);
+	return (false);
+}
 
-//     i = 0;
-//     rpt = malloc(sizeof(int)*ft_lstsize(rootA));
-//     while (rootA)
-//     {
-//         rpt[i] = rootA->data;
-//         rootA = rootA->next;
-//         i++;
-//     }
-// }
+void	low_sort(t_list **stack_a, t_list **stack_b)
+{
+	while (ft_lstsize(*stack_a) > 3)
+	{
+		int a = minExt(*stack_a);
+		if(a == 0)
+		{
+			pb(stack_a, stack_b);
+			continue ;
+		}	
+		if (firsthalf(a + 1, ft_lstsize(*stack_a))) // index + element
+			ra(stack_a);
+		else
+			rra(stack_a);
+	}
+
+	sort_t(stack_a);
+	while (*stack_b)
+		pa(stack_a, stack_b);
+}
