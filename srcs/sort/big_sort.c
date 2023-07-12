@@ -32,6 +32,8 @@ int *get_container(t_list *stack_a, int len)
 
 	i = 0;
 	container = malloc(sizeof(int) * len);
+	if (!container)
+		return (NULL);
 	tmp = stack_a;
 	while (tmp)
 	{
